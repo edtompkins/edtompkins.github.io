@@ -1,0 +1,14 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+.vite
+
+# Handoff-only reference material (not part of the deployed app).
+# The deployed assets are copied into public/assets/.
+/prototypes/
+/assets/
+
+# Local editor/agent settings
+.claude/

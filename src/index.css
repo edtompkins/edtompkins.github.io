@@ -1,0 +1,37 @@
+/* Inter — body / UI / labels */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GT Sectra Display — hero / H1 / big numbers (self-hosted, trial license) */
+@font-face { font-family: 'GT Sectra Display'; src: url('/assets/fonts/GT-Sectra-Display-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'GT Sectra Display'; src: url('/assets/fonts/GT-Sectra-Display-Light-Italic.woff2') format('woff2'); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: 'GT Sectra Display'; src: url('/assets/fonts/GT-Sectra-Display-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'GT Sectra Display'; src: url('/assets/fonts/GT-Sectra-Display-Regular-Italic.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'GT Sectra Display'; src: url('/assets/fonts/GT-Sectra-Display-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'GT Sectra Display'; src: url('/assets/fonts/GT-Sectra-Display-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'GT Sectra Display'; src: url('/assets/fonts/GT-Sectra-Display-Bold-Italic.woff2') format('woff2'); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'GT Sectra Display'; src: url('/assets/fonts/GT-Sectra-Display-Super.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+
+/* GT Sectra (text optical size) — section headers, pull quotes */
+@font-face { font-family: 'GT Sectra'; src: url('/assets/fonts/GT-Sectra-Book.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'GT Sectra'; src: url('/assets/fonts/GT-Sectra-Book-Italic.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'GT Sectra'; src: url('/assets/fonts/GT-Sectra-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'GT Sectra'; src: url('/assets/fonts/GT-Sectra-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'GT Sectra'; src: url('/assets/fonts/GT-Sectra-Bold-Italic.woff2') format('woff2'); font-weight: 700; font-style: italic; font-display: swap; }
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-paper text-black font-body;
+  }
+  /* Text links default to amber with an underline on hover (per brand). */
+  a:hover {
+    text-decoration: underline;
+  }
+}
