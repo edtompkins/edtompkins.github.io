@@ -34,7 +34,7 @@ export default function Home() {
         <div className="relative flex items-center justify-end overflow-hidden bg-paper md:absolute md:inset-y-0 md:right-0 md:w-[46%] lg:w-[44%]">
           <img
             src="/assets/headshot.jpg"
-            alt="Ed Tompkins, Platform Product Manager"
+            alt="Ed Tompkins, Principal Product Manager"
             className="block h-auto w-full [filter:saturate(.92)_contrast(1.02)]"
           />
           <div className="absolute inset-y-0 left-0 z-[2] w-[5px] bg-amber" />
