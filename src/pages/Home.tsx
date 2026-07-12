@@ -27,7 +27,7 @@ const TEASERS: { num: string; numClass: string; body: string; tag: string }[] = 
 export default function Home() {
   return (
     <>
-      <Nav active="home" lockup />
+      <Nav active="home" />
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-paper">

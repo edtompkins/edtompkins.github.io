@@ -19,19 +19,8 @@ function navLinkClass(active: boolean): string {
   ].join(' ')
 }
 
-// Plain wordmark, or the lockup variant (name over role, with the amber rule)
-// used on the home page.
-function Wordmark({ lockup }: { lockup: boolean }) {
-  if (!lockup) {
-    return (
-      <a
-        href="/"
-        className="font-display text-[21px] font-medium tracking-[-0.01em] text-ink hover:no-underline"
-      >
-        Ed Tompkins<span className="text-amber">.</span>
-      </a>
-    )
-  }
+// The lockup wordmark: name over role, with the amber rule. Used site-wide.
+function Wordmark() {
   return (
     <a href="/" className="inline-flex flex-col items-start leading-none hover:no-underline">
       <span className="font-display text-[21px] font-medium tracking-[-0.01em] text-ink">
@@ -45,19 +34,13 @@ function Wordmark({ lockup }: { lockup: boolean }) {
   )
 }
 
-export default function Nav({
-  active,
-  lockup = false,
-}: {
-  active: PageKey
-  lockup?: boolean
-}) {
+export default function Nav({ active }: { active: PageKey }) {
   const [open, setOpen] = useState(false)
 
   return (
     <nav className="relative border-b border-ink-15 bg-paper">
       <div className="mx-auto flex max-w-content items-center justify-between px-6 py-5 md:px-10">
-        <Wordmark lockup={lockup} />
+        <Wordmark />
 
         {/* Mobile toggle — a text "Menu" (the brand avoids icons) */}
         <button

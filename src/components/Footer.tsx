@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
         <div className="mt-12 flex flex-wrap justify-between gap-4 border-t border-white/12 pt-6 text-[13px] text-meta">
           <span>© 2026 Ed Tompkins</span>
-          <span>Platform Product Manager · edtompkins.com</span>
+          <span>Principal Product Manager · edtompkins.com</span>
         </div>
       </div>
     </footer>
