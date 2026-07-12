@@ -11,7 +11,7 @@ export default function Footer() {
               Ed Tompkins<span className="text-amber">.</span>
             </a>
             <p className="mt-4 text-[14px] leading-[1.6] text-inverse">
-              Platform product manager. I rescue stalled eCommerce, ERP, and API
+              Principal product manager. I rescue stalled eCommerce, ERP, and API
               programs and turn them into roadmaps that ship.
             </p>
           </div>
@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
         <div className="mt-12 flex flex-wrap justify-between gap-4 border-t border-white/12 pt-6 text-[13px] text-meta">
           <span>© 2026 Ed Tompkins</span>
-          <span>Platform Product Manager · edtompkins.com</span>
+          <span>Principal Product Manager · edtompkins.com</span>
         </div>
       </div>
     </footer>
