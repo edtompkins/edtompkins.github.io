@@ -50,7 +50,7 @@ const SMALL_QUOTES: { quote: string; name: string; role: string }[] = [
   },
   {
     quote:
-      '"He's strategic, but never disconnected from the technical details. If you're building a cloud-native or enterprise-scale product, you want Ed in the room."',
+      `"He's strategic, but never disconnected from the technical details. If you're building a cloud-native or enterprise-scale product, you want Ed in the room."`,
     name: 'Kevin Kwasniewski',
     role: "Sr. Business Analyst · on Ed's team at Ingram Micro, dotted-line report",
   },
