@@ -1,5 +1,4 @@
 import type { MouseEvent, ReactNode } from 'react'
-import { bookCall } from '../lib/calendly'
 
 // The throughline: a 40x2px amber rule under headers / hero H1 and on callouts.
 // Margins are set by the caller (top margin varies by placement).
@@ -15,21 +14,25 @@ const buttonSize: Record<ButtonSize, string> = {
   xl: 'px-[30px] py-[15px] text-[15px]',
 }
 
-// Primary CTA — opens the Calendly popup overlay.
-export function BookCallButton({
+// Primary CTA button — a link (defaults to the Contact page). Calendly is no
+// longer wired here; it fires only from the reframed link on the Contact page.
+export function PrimaryButton({
+  href,
+  children,
   size = 'nav',
   className = '',
 }: {
+  href: string
+  children: ReactNode
   size?: ButtonSize
   className?: string
 }) {
   return (
     <a
-      href="#"
-      onClick={bookCall}
+      href={href}
       className={`inline-flex items-center gap-2 rounded-sm bg-amber font-semibold leading-none text-white transition-colors duration-150 hover:bg-amber-hover hover:text-white hover:no-underline ${buttonSize[size]} ${className}`}
     >
-      Book a call
+      {children}
     </a>
   )
 }

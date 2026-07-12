@@ -1,7 +1,6 @@
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
-import { BookCallButton, Label, Throughline } from '../components/ui'
-import type { MouseEvent } from 'react'
+import { Label, Throughline } from '../components/ui'
 import { bookCall } from '../lib/calendly'
 
 type Row = {
@@ -10,7 +9,6 @@ type Row = {
   href: string
   external?: boolean
   download?: boolean
-  onClick?: (e: MouseEvent<HTMLAnchorElement>) => void
 }
 
 const ROWS: Row[] = [
@@ -20,12 +18,6 @@ const ROWS: Row[] = [
     value: 'linkedin.com/in/edltompkins →',
     href: 'https://linkedin.com/in/edltompkins',
     external: true,
-  },
-  {
-    label: 'Book 15 minutes',
-    value: 'calendly.com/edtompkins-6llc →',
-    href: '#',
-    onClick: bookCall,
   },
   {
     label: 'Resume',
@@ -46,13 +38,14 @@ export default function Contact() {
           <div className="max-w-[720px]">
             <Label className="mb-6 text-ink-70">Contact</Label>
             <h1 className="m-0 font-display text-[36px] font-normal leading-[1.1] tracking-[-0.01em] text-ink md:text-[44px]">
-              Let's talk.
+              Get in touch
             </h1>
             <Throughline className="mt-6" />
             <p className="mt-6 text-[19px] leading-[1.65] text-ink-70">
-              If you have a platform that has stalled and a team that cannot quite say
-              why, that is the conversation I like most. Tell me where things are
-              stuck and I will tell you honestly whether I can help.
+              I'm looking for my next full-time Principal Product Manager role,
+              platform, eCommerce, ERP, or API-heavy. If you're hiring for work like
+              that, or you just want to talk platform turnarounds, I'd love to hear
+              from you.
             </p>
             <p className="mt-[22px] text-[16px] font-semibold text-ink">
               I reply within one business day.
@@ -63,7 +56,6 @@ export default function Contact() {
                 <a
                   key={row.label}
                   href={row.href}
-                  onClick={row.onClick}
                   {...(row.external ? { target: '_blank', rel: 'noopener' } : {})}
                   {...(row.download ? { download: true } : {})}
                   className="group flex flex-col items-start justify-between gap-2 border-t border-ink-15 py-[26px] last:border-b last:border-ink-15 hover:no-underline md:flex-row md:items-center md:gap-6"
@@ -78,9 +70,16 @@ export default function Contact() {
               ))}
             </div>
 
-            <div className="mt-11">
-              <BookCallButton size="xl" />
-            </div>
+            <p className="mt-10 text-[16px] leading-[1.6] text-ink-70">
+              Recruiters and hiring managers, prefer a quick call? Grab 15 minutes:{' '}
+              <a
+                href="#"
+                onClick={bookCall}
+                className="font-semibold text-amber hover:text-amber-hover"
+              >
+                Schedule 15 minutes →
+              </a>
+            </p>
           </div>
         </div>
       </section>

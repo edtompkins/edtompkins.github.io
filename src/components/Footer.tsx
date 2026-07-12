@@ -1,5 +1,3 @@
-import { bookCall } from '../lib/calendly'
-
 export default function Footer() {
   return (
     <footer className="bg-ink pb-10 pt-16 text-white">
@@ -19,11 +17,10 @@ export default function Footer() {
           </div>
           <div className="flex flex-col items-start gap-3 text-left md:items-end md:text-right">
             <a
-              href="#"
-              onClick={bookCall}
+              href="/contact/"
               className="text-[14px] font-semibold text-amber hover:text-amber-hover"
             >
-              Book a call
+              Contact
             </a>
             <a
               href="mailto:edtompkins@gmail.com"

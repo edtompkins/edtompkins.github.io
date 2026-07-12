@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BookCallButton } from './ui'
+import { PrimaryButton } from './ui'
 
 export type PageKey = 'home' | 'about' | 'proof' | 'contact'
 
@@ -19,18 +19,45 @@ function navLinkClass(active: boolean): string {
   ].join(' ')
 }
 
-export default function Nav({ active }: { active: PageKey }) {
+// Plain wordmark, or the lockup variant (name over role, with the amber rule)
+// used on the home page.
+function Wordmark({ lockup }: { lockup: boolean }) {
+  if (!lockup) {
+    return (
+      <a
+        href="/"
+        className="font-display text-[21px] font-medium tracking-[-0.01em] text-ink hover:no-underline"
+      >
+        Ed Tompkins<span className="text-amber">.</span>
+      </a>
+    )
+  }
+  return (
+    <a href="/" className="inline-flex flex-col items-start leading-none hover:no-underline">
+      <span className="font-display text-[21px] font-medium tracking-[-0.01em] text-ink">
+        Ed Tompkins<span className="text-amber">.</span>
+      </span>
+      <span className="mb-1 mt-[7px] h-[2px] w-10 bg-amber" />
+      <span className="font-body text-[9px] font-semibold uppercase tracking-[0.14em] text-ink-70">
+        Principal Product Manager
+      </span>
+    </a>
+  )
+}
+
+export default function Nav({
+  active,
+  lockup = false,
+}: {
+  active: PageKey
+  lockup?: boolean
+}) {
   const [open, setOpen] = useState(false)
 
   return (
     <nav className="relative border-b border-ink-15 bg-paper">
       <div className="mx-auto flex max-w-content items-center justify-between px-6 py-5 md:px-10">
-        <a
-          href="/"
-          className="font-display text-[21px] font-medium tracking-[-0.01em] text-ink hover:no-underline"
-        >
-          Ed Tompkins<span className="text-amber">.</span>
-        </a>
+        <Wordmark lockup={lockup} />
 
         {/* Mobile toggle — a text "Menu" (the brand avoids icons) */}
         <button
@@ -50,7 +77,7 @@ export default function Nav({ active }: { active: PageKey }) {
               {l.label}
             </a>
           ))}
-          <BookCallButton />
+          <PrimaryButton href="/contact/">Get in touch</PrimaryButton>
         </div>
       </div>
 
@@ -68,7 +95,9 @@ export default function Nav({ active }: { active: PageKey }) {
               {l.label}
             </a>
           ))}
-          <BookCallButton className="mt-2 self-start" />
+          <PrimaryButton href="/contact/" className="mt-2 self-start">
+            Get in touch
+          </PrimaryButton>
         </div>
       )}
     </nav>

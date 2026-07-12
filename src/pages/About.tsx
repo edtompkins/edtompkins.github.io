@@ -1,6 +1,6 @@
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
-import { BookCallButton, Label, TLink, Throughline } from '../components/ui'
+import { PrimaryButton, Label, Throughline } from '../components/ui'
 
 const STORY: string[] = [
   'My degree is in History, with a minor in Psychology. I spent my early twenties studying why institutions collapse, why smart people make decisions that do not survive contact with reality, and why the official story of a failure is almost never the real one. I figured that would keep me around books. Instead it put me in IT.',
@@ -72,16 +72,21 @@ export default function About() {
             </h2>
             <Throughline className="mt-5" />
             <p className="mt-6 text-[18px] leading-[1.65] text-ink-70">
-              If you are leading a platform that has stalled and a team that cannot
-              quite say why, that is the conversation I like most. The fastest way to
-              find out whether I am the right person to fix it is to talk. Tell me
-              where things are stuck and I will tell you honestly whether I can help.
+              If you're hiring a Principal PM to lead platform, eCommerce, or API
+              work, I'd love to talk. The fastest way to find out if I'm a fit is to
+              reach out.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-[26px]">
-              <BookCallButton size="lg" />
-              <TLink href="mailto:edtompkins@gmail.com" className="text-[15px]">
-                edtompkins@gmail.com
-              </TLink>
+              <PrimaryButton href="/contact/" size="lg">Get in touch</PrimaryButton>
+              <span className="text-[15px] text-ink-70">
+                or email me at{' '}
+                <a
+                  href="mailto:edtompkins@gmail.com"
+                  className="font-semibold text-amber hover:text-amber-hover"
+                >
+                  edtompkins@gmail.com
+                </a>
+              </span>
             </div>
           </div>
         </div>

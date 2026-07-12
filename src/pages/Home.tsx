@@ -1,7 +1,7 @@
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import LogoStrip from '../components/LogoStrip'
-import { BookCallButton, Label, TLink, Throughline } from '../components/ui'
+import { PrimaryButton, Label, TLink, Throughline } from '../components/ui'
 
 const TEASERS: { num: string; numClass: string; body: string; tag: string }[] = [
   {
@@ -27,7 +27,7 @@ const TEASERS: { num: string; numClass: string; body: string; tag: string }[] = 
 export default function Home() {
   return (
     <>
-      <Nav active="home" />
+      <Nav active="home" lockup />
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-paper">
@@ -42,7 +42,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-content px-6 md:px-10">
           <div className="md:flex">
             <div className="w-full pb-2 pt-11 md:w-1/2 md:max-w-[480px] md:py-[88px] lg:w-[54%] lg:max-w-[540px] lg:py-[92px]">
-              <Label className="mb-5 text-ink-70">Principal Product Manager</Label>
+              <Label className="mb-5 text-amber">Open to Principal Product Manager roles</Label>
               <h1 className="m-0 font-display text-[38px] font-normal leading-[1.08] tracking-[-0.01em] text-ink md:text-[46px] lg:text-[54px]">
                 I turn stalled platform programs into roadmaps that ship.
               </h1>
@@ -55,7 +55,7 @@ export default function Home() {
                 platforms and three industries.
               </p>
               <div className="mt-[34px] flex flex-wrap items-center gap-6">
-                <BookCallButton size="lg" />
+                <PrimaryButton href="/contact/" size="lg">Get in touch</PrimaryButton>
                 <TLink href="/proof/" className="text-[15px]">
                   See the proof →
                 </TLink>
@@ -147,19 +147,19 @@ export default function Home() {
       <section className="border-t border-ink-15 bg-paper-sunken py-16 md:py-[104px]">
         <div className="mx-auto max-w-content px-6 md:px-10">
           <h2 className="m-0 font-serif text-[34px] font-bold leading-[1.15] text-ink">
-            Have a platform that's stalled?
+            Looking for a Principal PM who fixes stalled platforms?
           </h2>
           <Throughline className="mt-5" />
           <p className="mt-6 max-w-[64ch] text-[18px] leading-[1.65] text-ink-70">
-            If you're leading a program that's stuck and a team that can't quite say
-            why, that's the conversation I like most. Tell me where things are stuck
-            and I'll tell you honestly whether I can help.
+            I'm exploring my next full-time Principal Product Manager role, platform,
+            eCommerce, or API-heavy. If you're hiring for work like this, I'd love to
+            talk.
           </p>
           <p className="mt-[22px] text-[16px] font-semibold text-ink">
             I reply within one business day.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-[26px]">
-            <BookCallButton size="lg" />
+            <PrimaryButton href="/contact/" size="lg">Get in touch</PrimaryButton>
             <TLink href="mailto:edtompkins@gmail.com" className="text-[15px]">
               edtompkins@gmail.com
             </TLink>

@@ -1,7 +1,7 @@
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import LogoStrip from '../components/LogoStrip'
-import { BookCallButton, Label, TLink, Throughline } from '../components/ui'
+import { PrimaryButton, Label, TLink, Throughline } from '../components/ui'
 
 const HERO_CARDS: {
   num: string
@@ -230,18 +230,27 @@ export default function Proof() {
         <div className="mx-auto max-w-content px-6 md:px-10">
           <div className="max-w-[720px]">
             <h2 className="m-0 font-serif text-[30px] font-bold leading-[1.2] text-ink">
-              If you have a platform that has stalled and a team that cannot quite say
-              why, that is the conversation I like most.
+              That's the record. If you're hiring a Principal PM to do work like this,
+              let's talk.
             </h2>
             <Throughline className="mt-[22px]" />
-            <p className="mt-6 text-[17px] leading-[1.65] text-ink-70">
-              Tell me where things are stuck and I will tell you honestly whether I
-              can help.
+            <p className="mt-[22px] text-[16px] font-semibold text-ink">
+              I reply within one business day.
             </p>
-            <div className="mt-[30px] flex flex-wrap items-center gap-[26px]">
-              <BookCallButton size="lg" />
+            <div className="mt-8 flex flex-wrap items-center gap-[26px]">
+              <PrimaryButton href="/contact/" size="lg">Get in touch</PrimaryButton>
               <TLink href="mailto:edtompkins@gmail.com" className="text-[15px]">
                 edtompkins@gmail.com
+              </TLink>
+              <TLink href="/assets/Ed-Tompkins-Resume.pdf" download className="text-[15px]">
+                Resume →
+              </TLink>
+              <TLink
+                href="https://linkedin.com/in/edltompkins"
+                external
+                className="text-[15px]"
+              >
+                LinkedIn →
               </TLink>
             </div>
           </div>
