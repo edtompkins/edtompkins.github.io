@@ -37,17 +37,17 @@ export default function Contact() {
         <div className="mx-auto max-w-content px-6 md:px-10">
           <div className="max-w-[720px]">
             <Label className="mb-6 text-ink-70">Contact</Label>
-            <h1 className="m-0 font-display text-[36px] font-normal leading-[1.1] tracking-[-0.01em] text-ink md:text-[44px]">
+            <h1 className="m-0 font-heading text-[36px] font-normal leading-[1.1] tracking-[-0.01em] text-ink md:text-[44px]">
               Get in touch
             </h1>
             <Throughline className="mt-6" />
-            <p className="mt-6 text-[19px] leading-[1.65] text-ink-70">
+            <p className="mt-6 font-body text-[19px] leading-[1.65] text-ink-70">
               I'm looking for my next full-time Principal Product Manager role,
               platform, eCommerce, ERP, or API-heavy. If you're hiring for work like
               that, or you just want to talk platform turnarounds, I'd love to hear
               from you.
             </p>
-            <p className="mt-[22px] text-[16px] font-semibold text-ink">
+            <p className="mt-[22px] font-body text-[16px] font-medium text-ink">
               I reply within one business day.
             </p>
 
@@ -60,22 +60,22 @@ export default function Contact() {
                   {...(row.download ? { download: true } : {})}
                   className="group flex flex-col items-start justify-between gap-2 border-t border-ink-15 py-[26px] last:border-b last:border-ink-15 hover:no-underline md:flex-row md:items-center md:gap-6"
                 >
-                  <span className="text-[12px] font-semibold uppercase tracking-[0.09em] text-ink-40">
+                  <span className="font-ui text-[12px] font-medium tracking-[0.05em] text-ink-40">
                     {row.label}
                   </span>
-                  <span className="font-body text-[19px] font-medium text-ink group-hover:text-amber">
+                  <span className="font-body text-[17px] font-normal text-ink group-hover:text-amber">
                     {row.value}
                   </span>
                 </a>
               ))}
             </div>
 
-            <p className="mt-10 text-[16px] leading-[1.6] text-ink-70">
+            <p className="mt-10 font-body text-[16px] leading-[1.6] text-ink-70">
               Recruiters and hiring managers, prefer a quick call? Grab 15 minutes:{' '}
               <a
                 href="#"
                 onClick={bookCall}
-                className="font-semibold text-amber hover:text-amber-hover"
+                className="font-ui font-medium tracking-[0.01em] text-amber hover:text-amber-hover"
               >
                 Schedule 15 minutes →
               </a>

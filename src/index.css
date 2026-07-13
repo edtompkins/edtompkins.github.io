@@ -1,26 +1,37 @@
-/* Inter — body / UI / labels */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* GT Sectra Display — hero / H1 / big numbers (self-hosted, trial license) */
-@font-face { font-family: 'GT Sectra Display'; src: url('/assets/fonts/GT-Sectra-Display-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: 'GT Sectra Display'; src: url('/assets/fonts/GT-Sectra-Display-Light-Italic.woff2') format('woff2'); font-weight: 300; font-style: italic; font-display: swap; }
+/* GT Sectra superfamily — three optical families, self-hosted (licensed).
+   Display = authority (headlines, wordmark, numbers); GT Sectra = reading + UI;
+   GT Sectra Fine = editorial (pull quotes, reflective statements). */
+
+/* GT Sectra Display */
 @font-face { font-family: 'GT Sectra Display'; src: url('/assets/fonts/GT-Sectra-Display-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: 'GT Sectra Display'; src: url('/assets/fonts/GT-Sectra-Display-Regular-Italic.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
 @font-face { font-family: 'GT Sectra Display'; src: url('/assets/fonts/GT-Sectra-Display-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
 @font-face { font-family: 'GT Sectra Display'; src: url('/assets/fonts/GT-Sectra-Display-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: 'GT Sectra Display'; src: url('/assets/fonts/GT-Sectra-Display-Bold-Italic.woff2') format('woff2'); font-weight: 700; font-style: italic; font-display: swap; }
-@font-face { font-family: 'GT Sectra Display'; src: url('/assets/fonts/GT-Sectra-Display-Super.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
 
-/* GT Sectra (text optical size) — section headers, pull quotes */
+/* GT Sectra (text / reading + UI) — Book at 400, Medium at 500, Bold at 700 */
 @font-face { font-family: 'GT Sectra'; src: url('/assets/fonts/GT-Sectra-Book.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: 'GT Sectra'; src: url('/assets/fonts/GT-Sectra-Book-Italic.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
 @font-face { font-family: 'GT Sectra'; src: url('/assets/fonts/GT-Sectra-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
 @font-face { font-family: 'GT Sectra'; src: url('/assets/fonts/GT-Sectra-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: 'GT Sectra'; src: url('/assets/fonts/GT-Sectra-Bold-Italic.woff2') format('woff2'); font-weight: 700; font-style: italic; font-display: swap; }
+
+/* GT Sectra Fine — editorial: Regular upright, Book Italic for quotes */
+@font-face { font-family: 'GT Sectra Fine'; src: url('/assets/fonts/GT-Sectra-Fine-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'GT Sectra Fine'; src: url('/assets/fonts/GT-Sectra-Fine-Book-Italic.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+
+:root {
+  --font-sectra-display: 'GT Sectra Display', Georgia, serif;
+  --font-sectra: 'GT Sectra', Georgia, serif;
+  --font-sectra-fine: 'GT Sectra Fine', Georgia, serif;
+
+  /* Semantic tokens — components consume these, not the concrete families. */
+  --font-heading: var(--font-sectra-display);
+  --font-body: var(--font-sectra);
+  --font-ui: var(--font-sectra);
+  --font-editorial: var(--font-sectra-fine);
+}
 
 @layer base {
   html {
@@ -29,9 +40,17 @@
   }
   body {
     @apply bg-paper text-black font-body;
+    font-feature-settings: 'kern' 1, 'liga' 1;
   }
-  /* Text links default to amber with an underline on hover (per brand). */
+  /* Text links carry an underline on hover (per brand). */
   a:hover {
     text-decoration: underline;
+  }
+}
+
+@layer components {
+  /* Uppercase section label — capital spacing for even, legible caps. */
+  .u-caps {
+    font-feature-settings: 'kern' 1, 'liga' 1, 'cpsp' 1;
   }
 }

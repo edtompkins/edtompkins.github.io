@@ -42,9 +42,11 @@ export default {
         lg: '1081px',
       },
       fontFamily: {
-        display: ['"GT Sectra Display"', 'Georgia', 'serif'],
-        serif: ['"GT Sectra"', 'Georgia', 'serif'],
-        body: ['Inter', '-apple-system', '"Segoe UI"', 'sans-serif'],
+        // Semantic tokens mapped to the three GT Sectra optical families.
+        heading: ['"GT Sectra Display"', 'Georgia', 'serif'],
+        body: ['"GT Sectra"', 'Georgia', 'serif'],
+        ui: ['"GT Sectra"', 'Georgia', 'serif'],
+        editorial: ['"GT Sectra Fine"', 'Georgia', 'serif'],
       },
       maxWidth: {
         content: '1080px',

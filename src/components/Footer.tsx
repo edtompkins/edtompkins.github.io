@@ -6,11 +6,11 @@ export default function Footer() {
           <div className="max-w-[320px]">
             <a
               href="/"
-              className="font-display text-[22px] font-medium tracking-[-0.01em] text-white hover:no-underline"
+              className="font-heading text-[22px] font-medium tracking-[-0.01em] text-white hover:no-underline"
             >
               Ed Tompkins<span className="text-amber">.</span>
             </a>
-            <p className="mt-4 text-[14px] leading-[1.6] text-inverse">
+            <p className="mt-4 font-body text-[14px] leading-[1.6] text-inverse">
               Principal product manager. I rescue stalled eCommerce, ERP, and API
               programs and turn them into roadmaps that ship.
             </p>
@@ -18,13 +18,13 @@ export default function Footer() {
           <div className="flex flex-col items-start gap-3 text-left md:items-end md:text-right">
             <a
               href="/contact/"
-              className="text-[14px] font-semibold text-amber hover:text-amber-hover"
+              className="font-ui text-[14px] font-medium tracking-[0.01em] text-amber hover:text-amber-hover"
             >
               Contact
             </a>
             <a
               href="mailto:edtompkins@gmail.com"
-              className="text-[14px] text-white hover:text-white"
+              className="font-ui text-[14px] font-medium tracking-[0.01em] text-white hover:text-white"
             >
               edtompkins@gmail.com
             </a>
@@ -32,20 +32,20 @@ export default function Footer() {
               href="https://linkedin.com/in/edltompkins"
               target="_blank"
               rel="noopener"
-              className="text-[14px] text-white hover:text-white"
+              className="font-ui text-[14px] font-medium tracking-[0.01em] text-white hover:text-white"
             >
               LinkedIn →
             </a>
             <a
               href="/assets/Ed-Tompkins-Resume.pdf"
               download
-              className="text-[14px] text-white hover:text-white"
+              className="font-ui text-[14px] font-medium tracking-[0.01em] text-white hover:text-white"
             >
               Resume →
             </a>
           </div>
         </div>
-        <div className="mt-12 flex flex-wrap justify-between gap-4 border-t border-white/12 pt-6 text-[13px] text-meta">
+        <div className="mt-12 flex flex-wrap justify-between gap-4 border-t border-white/12 pt-6 font-ui text-[13px] text-meta">
           <span>© 2026 Ed Tompkins</span>
           <span>Principal Product Manager · edtompkins.com</span>
         </div>

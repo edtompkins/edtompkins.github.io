@@ -12,22 +12,23 @@ const LINKS: { key: PageKey; label: string; href: string }[] = [
 
 function navLinkClass(active: boolean): string {
   return [
-    'pb-[3px] text-[14px] font-medium border-b-2 hover:no-underline',
+    'font-ui pb-[3px] text-[14px] font-medium tracking-[0.01em] border-b-2 hover:no-underline',
     active
       ? 'text-ink border-amber'
       : 'text-ink-70 border-transparent hover:text-ink',
   ].join(' ')
 }
 
-// The lockup wordmark: name over role, with the amber rule. Used site-wide.
+// The lockup wordmark: name (Display Medium) over role (Sectra Medium), with the
+// amber rule. Used site-wide.
 function Wordmark() {
   return (
     <a href="/" className="inline-flex flex-col items-start leading-none hover:no-underline">
-      <span className="font-display text-[21px] font-medium tracking-[-0.01em] text-ink">
+      <span className="font-heading text-[21px] font-medium tracking-[-0.01em] text-ink">
         Ed Tompkins<span className="text-amber">.</span>
       </span>
       <span className="mb-1 mt-[7px] h-[2px] w-10 bg-amber" />
-      <span className="font-body text-[9px] font-semibold uppercase tracking-[0.14em] text-ink-70">
+      <span className="font-ui text-[9px] font-medium uppercase tracking-[0.14em] text-ink-70">
         Principal Product Manager
       </span>
     </a>
@@ -48,7 +49,7 @@ export default function Nav({ active }: { active: PageKey }) {
           aria-expanded={open}
           aria-label="Toggle navigation menu"
           onClick={() => setOpen((v) => !v)}
-          className="text-[14px] font-semibold tracking-[0.02em] text-ink md:hidden"
+          className="font-ui text-[14px] font-medium tracking-[0.01em] text-ink md:hidden"
         >
           {open ? 'Close' : 'Menu'}
         </button>
@@ -71,7 +72,7 @@ export default function Nav({ active }: { active: PageKey }) {
             <a
               key={l.key}
               href={l.href}
-              className={`py-2.5 text-[14px] font-medium hover:no-underline ${
+              className={`font-ui py-2.5 text-[14px] font-medium tracking-[0.01em] hover:no-underline ${
                 l.key === active ? 'text-ink' : 'text-ink-70 hover:text-ink'
               }`}
             >

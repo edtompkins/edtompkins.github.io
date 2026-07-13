@@ -22,7 +22,7 @@ export default function About() {
         <div className="mx-auto max-w-content px-6 md:px-10">
           <div className="max-w-[720px]">
             <Label className="mb-[26px] text-ink-70">About</Label>
-            <h1 className="m-0 font-display text-[34px] font-normal leading-[1.14] tracking-[-0.01em] text-ink md:text-[42px]">
+            <h1 className="m-0 font-heading text-[34px] font-normal leading-[1.14] tracking-[-0.01em] text-ink md:text-[42px]">
               I did not set out to fix broken software. I set out to figure out why
               things fall apart.
             </h1>
@@ -38,7 +38,7 @@ export default function About() {
             {STORY.map((para, i) => (
               <p
                 key={i}
-                className="mb-[22px] text-[17px] leading-[1.72] text-black last:mb-0 md:text-[18px]"
+                className="mb-[22px] font-body text-[17px] leading-[1.72] text-black last:mb-0 md:text-[18px]"
               >
                 {para}
               </p>
@@ -52,7 +52,7 @@ export default function About() {
         <div className="mx-auto max-w-content px-6 md:px-10">
           <div className="max-w-[720px]">
             <Label className="mb-[26px] text-amber">The line people remember</Label>
-            <p className="m-0 font-serif text-[34px] font-normal italic leading-[1.32] text-white">
+            <p className="m-0 font-editorial text-[34px] font-normal italic leading-[1.32] text-white">
               "A History major who rescues technical platforms. He reads a failing
               software program the way a historian reads a failing empire, and treats
               a stalled platform as a mystery with a cause, not a backlog with a
@@ -67,22 +67,22 @@ export default function About() {
       <section className="border-t border-ink-15 bg-paper-sunken py-16 md:py-24">
         <div className="mx-auto max-w-content px-6 md:px-10">
           <div className="max-w-[720px]">
-            <h2 className="m-0 font-serif text-[32px] font-bold leading-[1.18] text-ink">
+            <h2 className="m-0 font-heading text-[32px] font-normal leading-[1.1] tracking-[-0.01em] text-ink">
               Let's talk about what's stalled.
             </h2>
             <Throughline className="mt-5" />
-            <p className="mt-6 text-[18px] leading-[1.65] text-ink-70">
+            <p className="mt-6 font-body text-[18px] leading-[1.65] text-ink-70">
               If you're hiring a Principal PM to lead platform, eCommerce, or API
               work, I'd love to talk. The fastest way to find out if I'm a fit is to
               reach out.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-[26px]">
               <PrimaryButton href="/contact/" size="lg">Get in touch</PrimaryButton>
-              <span className="text-[15px] text-ink-70">
+              <span className="font-body text-[15px] text-ink-70">
                 or email me at{' '}
                 <a
                   href="mailto:edtompkins@gmail.com"
-                  className="font-semibold text-amber hover:text-amber-hover"
+                  className="font-ui font-medium tracking-[0.01em] text-amber hover:text-amber-hover"
                 >
                   edtompkins@gmail.com
                 </a>

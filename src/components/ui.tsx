@@ -14,8 +14,7 @@ const buttonSize: Record<ButtonSize, string> = {
   xl: 'px-[30px] py-[15px] text-[15px]',
 }
 
-// Primary CTA button — a link (defaults to the Contact page). Calendly is no
-// longer wired here; it fires only from the reframed link on the Contact page.
+// Primary CTA button — GT Sectra Medium (UI voice), links to the Contact page.
 export function PrimaryButton({
   href,
   children,
@@ -30,14 +29,14 @@ export function PrimaryButton({
   return (
     <a
       href={href}
-      className={`inline-flex items-center gap-2 rounded-sm bg-amber font-semibold leading-none text-white transition-colors duration-150 hover:bg-amber-hover hover:text-white hover:no-underline ${buttonSize[size]} ${className}`}
+      className={`inline-flex items-center gap-2 rounded-sm bg-amber font-ui font-medium leading-none tracking-[0.01em] text-white transition-colors duration-150 hover:bg-amber-hover hover:text-white hover:no-underline ${buttonSize[size]} ${className}`}
     >
       {children}
     </a>
   )
 }
 
-// Amber text link with the brand's hover behavior.
+// Amber text link — GT Sectra Medium (UI voice).
 export function TLink({
   href,
   children,
@@ -59,14 +58,14 @@ export function TLink({
       onClick={onClick}
       {...(external ? { target: '_blank', rel: 'noopener' } : {})}
       {...(download ? { download: true } : {})}
-      className={`font-semibold text-amber hover:text-amber-hover ${className}`}
+      className={`font-ui font-medium tracking-[0.01em] text-amber hover:text-amber-hover ${className}`}
     >
       {children}
     </a>
   )
 }
 
-// Uppercase section label — the only uppercase on the site.
+// Section label — GT Sectra Medium, 12px, +0.12em. The one uppercase style.
 export function Label({
   children,
   className = '',
@@ -76,7 +75,7 @@ export function Label({
 }) {
   return (
     <div
-      className={`text-[12px] font-semibold uppercase tracking-[0.1em] ${className}`}
+      className={`u-caps font-ui text-[12px] font-medium uppercase tracking-[0.12em] ${className}`}
     >
       {children}
     </div>
