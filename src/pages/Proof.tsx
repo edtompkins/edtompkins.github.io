@@ -93,7 +93,7 @@ export default function Proof() {
                   {c.title}
                 </h2>
                 <p className="mt-4 font-body text-[16px] leading-[1.62] text-black">{c.body}</p>
-                <div className="mt-6 font-ui text-[12px] font-medium tracking-[0.06em] text-ink-40">
+                <div className="mt-6 font-ui text-[12px] font-medium tracking-[0.06em] text-ink-50">
                   {c.tag}
                 </div>
               </div>
@@ -126,7 +126,7 @@ export default function Proof() {
                   {p.num}
                 </div>
                 <p className="mt-4 font-body text-[15px] leading-[1.6] text-black">{p.body}</p>
-                <div className="mt-[18px] font-ui text-[12px] font-medium tracking-[0.06em] text-ink-40">
+                <div className="mt-[18px] font-ui text-[12px] font-medium tracking-[0.06em] text-ink-50">
                   {p.tag}
                 </div>
               </div>

@@ -35,6 +35,8 @@ export default function Home() {
           <img
             src="/assets/headshot.jpg"
             alt="Ed Tompkins, Principal Product Manager"
+            width={1600}
+            height={2000}
             className="block h-auto w-full [filter:saturate(.92)_contrast(1.02)]"
           />
           <div className="absolute inset-y-0 left-0 z-[2] w-[5px] bg-amber" />
@@ -87,7 +89,7 @@ export default function Home() {
                   {t.num}
                 </div>
                 <p className="mt-4 font-body text-[15px] leading-[1.55] text-black">{t.body}</p>
-                <div className="mt-[18px] font-ui text-[12px] font-medium tracking-[0.06em] text-ink-40">
+                <div className="mt-[18px] font-ui text-[12px] font-medium tracking-[0.06em] text-ink-50">
                   {t.tag}
                 </div>
               </a>

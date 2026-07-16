@@ -60,7 +60,7 @@ export default function Contact() {
                   {...(row.download ? { download: true } : {})}
                   className="group flex flex-col items-start justify-between gap-2 border-t border-ink-15 py-[26px] last:border-b last:border-ink-15 hover:no-underline md:flex-row md:items-center md:gap-6"
                 >
-                  <span className="font-ui text-[12px] font-medium tracking-[0.05em] text-ink-40">
+                  <span className="font-ui text-[12px] font-medium tracking-[0.05em] text-ink-50">
                     {row.label}
                   </span>
                   <span className="font-body text-[17px] font-normal text-ink group-hover:text-amber">
