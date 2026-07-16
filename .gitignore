@@ -13,3 +13,4 @@ dist-ssr
 # Local editor/agent settings
 .claude/
 .gstack/
+.codex/
